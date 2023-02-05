@@ -23,7 +23,7 @@ const countReducer = (state, action) => {
 const Reducer = () => {
     const [number, numberDispatch] = useReducer(numberReducer, { count: 0 });
     const [count, countDispatch] = useReducer(countReducer, 0)
-    
+
     return (
         <div>
             <h1>Welcome Reducer</h1>
