@@ -1,8 +1,8 @@
 import React from 'react';
 
-const MyParagraph = (props) => {
-  console.log('MyParagraph RUNNING');
-  return <p>{props.children}</p>;
+const MyParagraph = ({ children }) => {
+    console.log('MyParagraph RUNNING');
+    return <p>{children}</p>;
 };
 
 export default MyParagraph;

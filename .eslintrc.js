@@ -71,5 +71,6 @@ module.exports = {
         'no-plusplus': 'off',
         'react/require-default-props': 'off',
         'react/prop-types': 'off',
+        'react/destructuring-assignment': 'off',
     },
 };

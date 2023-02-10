@@ -1,11 +1,11 @@
 import React from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import Layout from "../components/layout/Layout";
-import Portal from "../pages/Portal";
-import Home from "../pages/Home";
-import Reducer from "../pages/Reducer";
-import Remain from "../pages/Remain";
-import Memoization from "../pages/Memoization";
+import Layout from '../components/layout/Layout';
+import Portal from '../pages/Portal';
+import Home from '../pages/Home';
+import Reducer from '../pages/Reducer';
+import Remain from '../pages/Remain';
+import Memoization from '../pages/Memoization';
 
 const MyComponent = () => {
     return (
