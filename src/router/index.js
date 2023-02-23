@@ -6,7 +6,8 @@ import Home from '../pages/Home';
 import Reducer from '../pages/Reducer';
 import Remain from '../pages/Remain';
 import Memoization from '../pages/Memoization';
-import LifeCycle from '../pages/LifeCycle';
+import LifeCycleClass from '../pages/LifeCycleClass';
+import LifeCycleFunc from '../pages/LifeCycleFunc';
 
 const MyComponent = () => {
     return (
@@ -18,7 +19,8 @@ const MyComponent = () => {
                     <Route path="/reducer" element={<Reducer />} />
                     <Route path="/memoization" element={<Memoization />} />
                     <Route path="/remain" element={<Remain />} />
-                    <Route path="/lifeCycle" element={<LifeCycle />} />
+                    <Route path="/lifeCycleClass" element={<LifeCycleClass />} />
+                    <Route path="/lifeCycleFunc" element={<LifeCycleFunc />} />
                 </Route>
             </Routes>
         </HashRouter>

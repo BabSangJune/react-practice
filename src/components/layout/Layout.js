@@ -9,7 +9,8 @@ const Layout = () => {
                 <Link to="/reducer">Reducer Test</Link>&nbsp;&nbsp;
                 <Link to="/memoization">Memoization Test</Link>&nbsp;&nbsp;
                 <Link to="/remain">Remain Test</Link>&nbsp;&nbsp;
-                <Link to="/lifeCycle">LifeCycle Test</Link>&nbsp;&nbsp;
+                <Link to="/lifeCycleClass">LifeCycleClass Test</Link>&nbsp;&nbsp;
+                <Link to="/lifeCycleFunc">LifeCycleFunc Test</Link>&nbsp;&nbsp;
             </header>
             <main>
                 <Outlet />

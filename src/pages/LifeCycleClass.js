@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { Component } from 'react';
 
-class LifeCycle extends React.Component {
+class LifeCycleClass extends React.Component {
     constructor(props) {
         console.log('===== constructor =====');
         super(props);
@@ -48,11 +48,12 @@ class LifeCycle extends React.Component {
             setTimeout(() => {
                 console.log('getIdPromise');
                 resolve({ id: 'LifeCycle' });
-            }, 5000);
+            }, 1000);
         });
     }
 
     getNumbersPromise(id) {
+        console.log('getNumbersPromise');
         const data = {
             LifeCycle: [1, 2, 3, 4, 5],
         };
@@ -70,6 +71,7 @@ class LifeCycle extends React.Component {
 
         return (
             <>
+                <a href="https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/" target="_blank">Class Img</a>
                 <h1>Hello! {this.state.id}</h1>
                 <ul>
                     {this.state.list.map(num => (
@@ -81,4 +83,4 @@ class LifeCycle extends React.Component {
     }
 }
 
-export default LifeCycle;
+export default LifeCycleClass;
