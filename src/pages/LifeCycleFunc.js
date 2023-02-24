@@ -1,10 +1,11 @@
 /* eslint-disable */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useMemo, useCallback } from 'react';
 
 const LifeCycleFunc = () => {
     console.log('===== constructor =====')
     const [name, setName] = useState('');
     const [li, setLi] = useState();
+    const [memo, setMemo] = useState();
     
     const getIdPromise = () => {
         return new Promise((resolve, reject) => {
@@ -22,6 +23,19 @@ const LifeCycleFunc = () => {
             }, 1000);
         });
     };
+    
+    const memoConsole = (memo) => {
+        setMemo('memo')
+        console.log(`===== ${memo} =====`);
+        return memo
+    }
+    
+    const testMemo = useMemo(() => memoConsole(memo), [li]);
+    
+    useLayoutEffect(() => {
+        console.log('===== useLayoutEffect =====');
+    }, []);
+    
     
     useEffect(() => {
         console.log('===== componentDidMount =====');
@@ -48,8 +62,10 @@ const LifeCycleFunc = () => {
     
     return (
         <div>
-            <a href="https://wavez.github.io/react-hooks-lifecycle/" target="_blank">Class Img</a>
+            <a href="https://wavez.github.io/react-hooks-lifecycle/" target="_blank">func Img</a>
+            <a href="https://github.com/donavon/hook-flow" target="_blank">hook flow Img</a>
             <h1>Hello! { `${ name }` }</h1>
+            {testMemo}
             <ul>
                 { li && li.map((item, index) => <li key={ index }>{ item }</li>) }
             </ul>
